@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Suikoden II"
+id = "SLUS-00958"
+players = 2
+exe = "disc/SLUS_009.58"
+disc = "disc/Suikoden II (USA).cue"
+load_address = "0x8006B000"
+entry_pc = "0x800D48B0"
+text_size = "0x0009E800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Suikoden II (USA).bin"
+cue_name = "Suikoden II (USA).cue"
+boot_exe = "SLUS_009.58"
+known_sizes = [513907296]
+known_md5 = [
+  "d0e75f47e4b2451339a5f13ad821ca5d",
+]
+known_sha1 = [
+  "123ad3a15b3f634afd2ba0144405f9d156417907",
+]
+known_crc32 = [
+  "7fbe0579",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+window_title = "Suikoden II Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "ee1b05f4c9595cfe1ac758cf9324c5cad08aee00174e1f395880935348f22a68"

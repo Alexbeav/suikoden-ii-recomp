@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Suikoden II",
+    "id": "SLUS-00958",
+    "boot_exe": "SLUS_009.58"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 2
+  },
+  "rom_identity": {
+    "cue_name": "Suikoden II (USA).cue",
+    "bin_name": "Suikoden II (USA).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 513907296,
+      "md5": "d0e75f47e4b2451339a5f13ad821ca5d",
+      "sha1": "123ad3a15b3f634afd2ba0144405f9d156417907",
+      "crc32": "7fbe0579"
+    },
+    "disc_fp": "ee1b05f4c9595cfe1ac758cf9324c5cad08aee00174e1f395880935348f22a68"
+  },
+  "exe": {
+    "load_address": "0x8006B000",
+    "entry_pc": "0x800D48B0",
+    "text_size": "0x0009E800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1073,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK \u2014 Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

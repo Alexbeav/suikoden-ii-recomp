@@ -1,0 +1,54 @@
+[project]
+title = "Suikoden II"
+region = "USA"
+revision = "serial-bound source; retail revision not separately labeled"
+track = "recompilation"
+intended_audience = "player"
+commercial_use_possible = false
+representative_level = "existing aggregate package startup; full gameplay not claimed"
+
+[retail_identity]
+disc_count = 1
+serials = ["SLUS-00958"]
+executable_paths = ["disc/SLUS_009.58"]
+executable_sha256 = ""
+load_address = "0x8006B000"
+entry_point = "0x800D48B0"
+
+[framework]
+name = "PSXRecomp"
+repository = "https://github.com/Alexbeav/psxrecomp.git"
+commit = "f2731f8a0fc38444dc6deb4a05100f7abc7eeddb"
+tree = "7628adbc47f968057db6f17272fdefa9a5706adc"
+recomp_ui_commit = "493434ab1893e8a80b8bf2bad0304da9110cf12b"
+license = "See the pinned dependency license; this binding does not approve commercial use."
+
+[release_binding]
+source_commit = "f2731f8a0fc38444dc6deb4a05100f7abc7eeddb"
+current_title_version = "0.1.0"
+current_public_topology = "owned-input-kit-only"
+current_public_release = "none"
+current_package_platform = "none-promoted"
+manual_test = "operator-accepted-reported-symptoms-private-build-only"
+linux_qualification = "pending-exact-package-and-native-test"
+macos_qualification = "testing-waived-by-alex-2026-09-14; packaging-gates-still-apply"
+publication = "preparatory; public publication is a separate approval"
+retcomm_submission = "not-authorized"
+
+[limits]
+maximum_local_generated_gib = 20
+maximum_single_trace_gib = 8
+
+[paths]
+local_context = ".local-context"
+generated = "generated"
+captures = "out/captures"
+traces = "out/traces"
+packages = "dist"
+
+[release]
+version = "0.1.0"
+platform = "multi-platform"
+supported_platforms = ["windows-x64", "linux-x64", "macos-arm64", "macos-x64"]
+graduation_state = "bootstrap_verified"
+public_package_status = "not-published"
